@@ -28,7 +28,7 @@ namespace AffichageDesNotes
 
         public MainPage()
         {
-            this.serverName = "localhost";
+            this.serverName = /*"localhost";*/"labosio.net";
             this.InitializeComponent();
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
@@ -63,6 +63,7 @@ namespace AffichageDesNotes
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            
             try
             {
                 // Pour la connexion récupération du Nom en fonction des identifiants
@@ -94,10 +95,11 @@ namespace AffichageDesNotes
                 foreach (string ligne in lignes)
                 {
                     string[] elements = ligne.Split(';');
-                    result += "\n\t"+ elements[3] + "  en  " + elements[1] + "\n\t\t" + elements[2] + "\n";
+                    result += "\n\t"+ elements[3] + "  en  " + elements[1] + "\n\t\t" + elements[2] + "\n-------------------------------------\n\n";
                 }
                 lbNom.Text = "Bonjour " + reponseEnString2;
                 lbElementRecu.Text = result;
+                
 
                 if (lignes != null)
                 {

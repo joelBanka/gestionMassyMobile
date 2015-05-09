@@ -15,12 +15,11 @@
             <TextBlock x:Name="lbElementRecu" ></TextBlock>
             <TextBlock x:Name="lbReponse" ></TextBlock>
             <TextBlock Text="Identifiant" Margin="15,50,0,0" FontSize="22" ></TextBlock>
-            <TextBox x:Name="tbIdentifiant" Margin="70,0,30,0" PlaceholderText="Saisir mail" ></TextBox>
+            <TextBox x:Name="tbIdentifiant" Margin="70,0,30,0" PlaceholderText="Saisir mail" InputScope="EmailSmtpAddress" ></TextBox>
             <TextBlock Text="Mot de Passe" FontSize="22" Margin="15,20,0,0" ></TextBlock>
-            <TextBox x:Name="tbMotDePasse" Margin="70,0,30,0" PlaceholderText="Saisir mot de passe" ></TextBox>
-            <Button Content="Valider" x:Name="btValider" Click="btValider_Click" Margin="70,60,0,0" ></Button>
+            <PasswordBox x:Name="tbMotDePasse" Margin="70,0,30,0" ></PasswordBox>
+            <Button Content="Valider" x:Name="btValider" Click="btValider_Click" Margin="70,30,0,0" ></Button>
             <Button Content="Annuler" x:Name="btAnnuler" Click="btAnnuler_Click" Margin="255,-60,0,0" ></Button>
-
         </StackPanel>
 
     </Grid>

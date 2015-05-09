@@ -49,14 +49,15 @@ namespace AffichageDesNotes
         {
             try
             {
-                string adresse = "http://localhost/gestionmassy/connexion/getIdStagiaire";
+               // string adresse = "http://localhost/gestionmassy/connexion/getIdStagiaire";
+                string adresse = "http://labosio.net/gestionmassy/connexion/getIdStagiaire";
                 FormUrlEncodedContent content = new FormUrlEncodedContent(new[] 
                  {
                     new KeyValuePair<string, string>("email", tbIdentifiant.Text),
-                    new KeyValuePair<string, string>("pwd", tbMotDePasse.Text)
+                    new KeyValuePair<string, string>("pwd", tbMotDePasse.Password)
                 });
                 VariableGlobale.MailDuStagiaire = tbIdentifiant.Text;
-                VariableGlobale.MotPassDuStagiaire = tbMotDePasse.Text;
+                VariableGlobale.MotPassDuStagiaire = tbMotDePasse.Password;
 
                 HttpResponseMessage laResponse = await httpClient.PostAsync(adresse, content);
                 laResponse.EnsureSuccessStatusCode();
@@ -93,13 +94,16 @@ namespace AffichageDesNotes
         private void btAnnuler_Click(object sender, RoutedEventArgs e)
         {
             tbIdentifiant.Text = "";
-            tbMotDePasse.Text = "";
+            tbMotDePasse.Password = "";
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             tbIdentifiant.Text = "bankajoel@yahoo.fr";
-            tbMotDePasse.Text = "banka";
+            
+            tbMotDePasse.Password = "banka";
         }
+
+
     }
 }
