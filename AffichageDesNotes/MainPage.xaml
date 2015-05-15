@@ -16,7 +16,7 @@
             
                 <TextBlock Text="Renponse:" x:Name="lbNom" FontSize="24" Height="30" Margin="15,30,0,0" />
             <TextBlock x:Name="lbMessageReponse" Margin="15,20,0,0" FontSize="18" SelectionChanged="lbMessageReponse_SelectionChanged" Tapped="lbMessageReponse_Tapped" ></TextBlock>
-            <TextBlock Text="▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬" Margin="0,15,0,0"/>
+            <TextBlock x:Name="trait" Text="▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬" Margin="0,15,0,0"/>
             
             <Grid 
                 Grid.Column="1" Margin="15,0,0,0">
